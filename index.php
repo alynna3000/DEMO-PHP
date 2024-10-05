@@ -7,30 +7,36 @@
 </head>
 <body>
     <?php
-        $week = "Monday";
-        switch ($week) {
-            case 'Monday':
-                echo "Weekdays";
-                break;
-            case 'Tuesday':
-                echo "Weekdays";
-                break;
-            case 'Wednesday':
-                echo "Weekdays";
-                break;
-            case 'Thursday':
-                echo "Weekdays";
-                break;
-            case 'Friday':
-                echo "Weekdays";
-                break;
-
-            default:
-            echo "NOT VALID DATE";
+    $week = "sundayy";
+    switch($week){
+        case "monday";
+            echo "Weekdays";
             break;
-        }
-        ?>
-
+        case "tuesday";
+            echo "Weekdays";
+            break;
+        case "wednesday";
+            echo "Weekdays";
+            break;
+        case "thursday";
+            echo "Weekdays";
+            break;
+         case "friday";
+            echo "Weekdays";
+            break;
+        case "saturday";
+            echo "Weekends";
+            break;
+        case "sunday";
+            echo "Weekends";
+            break;
+        default;
+            echo "Not Valid Date";
+            break;
        
+    }
+     
+    ?>
+   
 </body>
 </html>

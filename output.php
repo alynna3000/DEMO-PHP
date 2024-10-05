@@ -1,63 +1,64 @@
 <?php
 
-if($_SERVER["REQUEST_METHOD"]=="POST")
-{
-    $email=$_POST["email"];
-    $username=$_POST["username"];
-    $password=$_POST["password"];
-    $confirm_password=$_POST["confirm-password"];
 
-    test($username);
-    test($email);
-    test($password);
-    test($confirm_password);
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+   $username            = $_POST["username"];
+   $email               = $_POST["email"];
+   $password            = $_POST["password"];
+   $confirm_password    = $_POST["confirm-password"];
 
+
+   
+   
 
 
 
-    // dummytummy("waaaaaaaaaa");
-
-    /* function dummytummy($x)
-    {
-        echo "the value is ano ". $x;
-    } */
 
 
-  /* if(trim($email))
-  {
-    echo "USER EMAIL IS NOT EMPTY <br>";
-  } else {
-    echo "USER EMAIL IS EMPTY <br>";
-  }
 
-  if(trim($username))
-  {
-    echo "USERNAME IS NOT EMPTY <br>";
-  } else {
-    echo "USERNAME IS EMPTY <br>";
-  }
-
-  if(trim($password))
-  {
-    echo "USER PASSWORD IS NOT EMPTY <br>";
-  } else {
-    echo "USER PASSWORD IS EMPTY <br>";
-  }
-
-  if(trim($confirm_password))
-  {
-    echo "USER CONFIRM PASSWORD IS NOT EMPTY <br>";
-  } else {
-    echo "USER CONFIRM PASSWORD IS EMPTY <br>";
-  } */
+    //Validate
+   
+    if (trim($username) != ""){
+    echo "User username is not empty<br>";
+    } else {
+    echo "Field username is empty <br>";
+    }
 
 
-  
-    /* echo "username is ". $username. "<br>";
-    echo "user email is ". $email.  "<br>";
-    echo "user password is ". $password.  "<br>";
-    echo "user confirm password is ". $confirm-password.  "<br>"; */
+    if (trim($email) != ""){
+    echo "User email is not empty<br>";
+    } else {
+    echo "Field email is empty <br>";
+    }
+
+
+    if (trim($password) != ""){
+    echo "User password is not empty<br>";
+    } else {
+    echo "Field password is empty <br>";
+    }
+
+
+    if (trim($confirm_password) != ""){
+    echo "User confirm password is not empty<br>";
+    } else {
+    echo "Field password is empty <br>";
+    }
+   
+    if($password == $confirm_password){
+
+
+        header("location: demo.php?success=REGISTRATION SUCCESSFUL");
+        exit;
+
+
+    } else {
+        header("location: demo.php?error=PASSWORD MISMATCH");
+        exit;
+
+
+    }
+
+
 }
-
-
 ?>
